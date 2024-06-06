@@ -1,4 +1,5 @@
-import Navbar from "../components/Navbar";
+import StoreProvider from "./StoreProvider";
+import './globals.css'
 
 export const metadata = {
   title: "Nextjs App",
@@ -9,8 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
+        <StoreProvider>{children}</StoreProvider>
       </body>
     </html>
   );
